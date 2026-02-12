@@ -77,9 +77,9 @@ Besides TTT, as you can tell, the course also features intensive written communi
 
 |             	|                                                         Instructor                                                         	|                                          Tutor                                         	|
 |-------------	|:--------------------------------------------------------------------------------------------------------------------------:	|:--------------------------------------------------------------------------------------:	|
-| Name        	| Dr. Chenshu WU                                                                                                             	| Mr. Sheng LYU                                                                          	|
+| Name        	| Dr. Chenshu WU                                                                                                             	| Mr. Yuemin  YU                                                                          	|
 | Office      	| Office: CB315B                                                                                                             	| HW101M                                                                                 	|
-| Email       	| chenshu@cs.hku.hk                                                                                                          	| shenglyu@connect.hku.hk                                                                	|
+| Email       	| chenshu@cs.hku.hk                                                                                                          	| yuyuemin@connect.hku.hk                                                                	|
 | Office Hour 	| <br> Tue 9:00 am-10:30 am<br> Fri 9:00 am to 10:30 am<br>By appointment: [Appointment](https://calendly.com/cswu-1/comp3516-office-hours) 	| <br>Thur 12:30 PM - 13:30 PM (f2f)<br>Mon 9:30 AM - 10:30 AM (Online)<br>By appointment: [Appointment](https://hku.au1.qualtrics.com/jfe/form/SV_bmudu4j6QIUTWOG) 	|
 | Tel         	| 2241 5726                                                                                                                  	| 9476 5141 (Not preferred)                                                              	|
 
