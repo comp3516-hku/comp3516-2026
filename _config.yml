@@ -5,6 +5,7 @@ course_semester: "Spring 2026"
 
 baseurl: "/comp3516-2026" # the subpath of your site, e.g. /blog/
 url: "https://comp3516-hku.github.io" # the base hostname & protocol for your site
+repository: "comp3516-hku/comp3516-2026"
 
 schoolname: "School of Computing and Data Science, The University of Hong Kong (HKU)"
 schoolurl: "https://cds.hku.hk"
