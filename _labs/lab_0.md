@@ -3,9 +3,7 @@ layout: lab
 type: lab
 date: 2026-02-10
 title: 'Lab #0 Beginning'
-# pdf: /static_files/assignments/asg.pdf
 attachment: /static_files/lab_0_release.zip
-# solutions: /static_files/assignments/asg_solutions.pdf
 mathjax: true
 ---
 
