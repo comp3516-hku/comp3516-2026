@@ -17,7 +17,7 @@ Let's start by understanding what a signal is. Actually, you are already an expe
 $$
     \mathbf{s} = s(t), \quad -\infty < t < \infty.
 $$
-Note that the signal is a finite real valued function. These are derived from physical requirement. We use $t$ to denote time. Depending on the nature of $t$, signals can be classified as either analog or digital. An analog signal has a continuous time variable, $s(t)$, while a digital signal features discrete time intervals, represented as $s_n$, making it suitable for computer processing. The term 'digital' signifies that the continuous time variable $t$ has been quantized into discrete values using specific methods. Normally, we denote $s(t)$ as the signal. Sometimes we refer to $s_n$ to emphisize the digitality. 
+Note that the signal is a finite real valued function. These are derived from physical requirement. We use $t$ to denote time. Depending on the nature of $t$, signals can be classified as either analog or digital. An analog signal has a continuous time variable, $s(t)$, while a digital signal features discrete time intervals, represented as $s_n$, making it suitable for computer processing. The term 'digital' signifies that the continuous time variable $t$ has been quantized into discrete values using specific methods. Normally, we denote $s(t)$ as the signal. Sometimes we refer to $s_n$ to emphasize the digitality. 
 
 In the realm of signal processing, we view a signal as a function that conveys information about a particular phenomenon. Essentially, any variable quantity that changes over time or space can serve as a signal, facilitating the communication of messages between observers.
 
@@ -44,7 +44,7 @@ inspect(vfc.reader.infos) # inspect video file metadata
 
     {'video_found': True, 'audio_found': True, 'metadata': {'major_brand': 'isom', 'minor_version': '512', 'compatible_brands': 'isomiso2avc1mp41', 'encoder': 'Lavf58.29.100'}, 'inputs': [{'streams': [{'input_number': 0, 'stream_number': 0, 'stream_type': 'video', 'language': None, 'default': True, 'size': [1280, 720], 'bitrate': 613, 'fps': 25.0, 'codec_name': 'h264', 'profile': '(High)', 'metadata': {'Metadata': '', 'handler_name': 'ISO Media file produced by Google Inc.', 'vendor_id': '[0][0][0][0]'}}, {'input_number': 0, 'stream_number': 1, 'stream_type': 'audio', 'language': None, 'default': True, 'fps': 44100, 'bitrate': 128, 'metadata': {'Metadata': '', 'handler_name': 'ISO Media file produced by Google Inc.', 'vendor_id': '[0][0][0][0]'}}], 'input_number': 0}], 'duration': 3.04, 'bitrate': 752, 'start': 0.0, 'default_video_input_number': 0, 'default_video_stream_number': 0, 'video_codec_name': 'h264', 'video_profile': '(High)', 'video_size': [1280, 720], 'video_bitrate': 613, 'video_fps': 25.0, 'default_audio_input_number': 0, 'default_audio_stream_number': 1, 'audio_fps': 44100, 'audio_bitrate': 128, 'video_duration': 3.04, 'video_n_frames': 76}
     /home/shenglyu/miniconda3/envs/comp3516/lib/python3.9/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2 -i ./example_data/example_1.mp4 -loglevel error -f image2pipe -vf scale=1280:720 -sws_flags bicubic -pix_fmt rgb24 -vcodec rawvideo -
-
+    
 
 
 <pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #000080; text-decoration-color: #000080">╭─────────────────────────────────── </span><span style="color: #000080; text-decoration-color: #000080; font-weight: bold">&lt;</span><span style="color: #ff00ff; text-decoration-color: #ff00ff; font-weight: bold">class</span><span style="color: #000000; text-decoration-color: #000000"> </span><span style="color: #008000; text-decoration-color: #008000">'dict'</span><span style="color: #000080; text-decoration-color: #000080; font-weight: bold">&gt;</span><span style="color: #000080; text-decoration-color: #000080"> ────────────────────────────────────╮</span>
@@ -166,7 +166,7 @@ HTML(f"""
 
 
 <video width="960" height="540" controls>
-    <source src="../static_files/example_data/example_1.mp4">
+    <source src="example_data/example_1.mp4">
 </video>
 
 
@@ -195,7 +195,7 @@ HTML("""
 
 
 <audio <audio width=" " height=" "
-  src="../static_files/example_data/example_1.mp4"  
+  src="example_data/example_1.mp4"  
   controls>
 </audio>
 
@@ -600,46 +600,42 @@ plt.grid(True)
 
 In this tutorial, we talk about what is signal and introduce some useful signals in our course. We focus on showing how to generate these signals. In the later tutorial, we will show how to analyze these signals (data). 
 
-# Programming Task
+# Programming Task for Lab 1
 
 ## Task 1-1: Signal Generation (45 points)
 
 **You are required to implement the functions in `task_1_1.py`**.
 
-Please generate the following signals by implementing `generate_signal(id)`, where `id` is the index of the signal. The sampling rate `f_s` is given by `self.fs` (`self.fs >= 1000Hz`) (You do not need to care about `self.fs`). The time range is $-1 \le t < 1s$
+Please generate the following signals by implementing `generate_signal_n()` where `n` is the index of the signal. The sampling rate `f_s` is given by `self.fs` (`self.fs >= 1000Hz`) (You do not need to care about `self.fs`). The time range is $-1 \le t < 1s$
 
 1. Generate a pure tone signal with frequency and phase offset.
 
-![Pure Tone (Task 1-1-1)](../static_files/lab_1_image/lab_1_1_1.png)
-   
-2. Generate rectangle wave (pulse) and triangle wave.
+![Pure Tone (Task 1-1-1)](../static_files/image/lab_1_1_1.png)
 
-![Rectangle and triangle wave (Task 1-1-2)](../static_files/lab_1_image/lab_1_1_2.png)
-   
-3. Generate the complex signal according to the real and imaginary parts. These two are both pure tone signals.
+1. Generate rectangle wave (pulse) and triangle wave.
 
-![Complex signal (Task 1-1-3)](../static_files/lab_1_image/lab_1_1_3.png)
+![Rectangle and triangle wave (Task 1-1-2)](../static_files/image/lab_1_1_2.png)
+
+1. Generate the complex signal according to the real and imaginary parts. These two are both pure tone signals.
+
+![Complex signal (Task 1-1-3)](../static_files/image/lab_1_1_3.png)
 
 You should both return the time stamps (in `s`) and signals. For facilitating
   the testing of your work, please strictly follow the return format.
 
-
 After implementing the functions, you can run the following code to check the code:
+
 ```bash
 python check.py --task 1
 ```
 
 The code will also automatically generate the figures for you to check the correctness of your implementation. You can find the figures in the `fig` folder.
 
-
-
-
-
 ## Task 1-2: Chirp Signal (30 points)
 
-**You are required to implement the functions in `task_1_2.py`.** 
+**You are required to implement the functions in `task_1_2.py`.**
 
-A chirp signal is a type of signal in which the frequency changes over time. In radar and sonar signal processing, as well as in other fields, chirp signals are very useful because of their properties. 
+A chirp signal is a type of signal in which the frequency changes over time. In radar and sonar signal processing, as well as in other fields, chirp signals are very useful because of their properties.
 
 Based on different $f(t)$, you are supposed to generate different types of chirps. Your task is to generate the chirp signal (`s_t`) along with timestamp (`t`) and frequency function `f_t`. The sampling rate is given by `self.fs`. Time starts from 0. You are supposed to use the cosine function to generate the chirps.
 
@@ -648,34 +644,37 @@ Based on different $f(t)$, you are supposed to generate different types of chirp
    f(t)=f_{\text {start }}+\left(\frac{f_{\text {end }}-f_{\text {start }}}{T}\right) \cdot t
    $$
 
- Please implement 
+ Please implement
+
 ```python
 def generate_linear_chirp(amplitude, period, duration, start_freq, end_freq, init_phase)
 ```
-, where 
- 
- - `amplitude` is the maximum amplitude of the chirp signal,
- - `period` is duration of one chirp cycle in seconds,
- - `duration` means total duration of the signal in seconds, 
- - `start_freq`: Starting frequency of the chirp in Hz,
- - `end_freq`: Ending frequency of the chirp in Hz,
- - `init_phase`:  Initial phase of the chirp in radians.
+
+, where
+
+- `amplitude` is the maximum amplitude of the chirp signal,
+- `period` is duration of one chirp cycle in seconds,
+- `duration` means total duration of the signal in seconds,
+- `start_freq`: Starting frequency of the chirp in Hz,
+- `end_freq`: Ending frequency of the chirp in Hz,
+- `init_phase`:  Initial phase of the chirp in radians.
 
 You should return
 
- - `t`: Timestamp values in second
- - `f_t`: Frequency values over `t`
- - `s_t`: Generated signal values
+- `t`: Timestamp values in second
+- `f_t`: Frequency values over `t`
+- `s_t`: Generated signal values
 
-
-2. Quadratic Chirp:
+1. Quadratic Chirp:
    $$f(t) = f_{\text {start }} + (f_{\text {end }} - f_{\text {start }}) * \frac{t^2}{T^2}$$
-   Please implement 
+   Please implement
+
    ```python
-   def generate_quar_chirp(amplitude, period, duration, start_freq, end_freq, init_phase)
+   def generate_quad_chirp(amplitude, period, duration, start_freq, end_freq, init_phase)
    ```
 
 After implementing the functions, you can run the following code to check the code:
+
 ```bash
 python check.py --task 2
 ```
@@ -686,11 +685,11 @@ The code will also automatically generate the figures for you to check the corre
 
 **You are required to implement the function in `task_1_3.py`.**
 
-Now we consider a real communication system. The basic role of communication system is to convey messages over the medium. 
+Now we consider a real communication system. The basic role of communication system is to convey messages over the medium.
 
 Amplitude modulation (AM) is a technique used in communication systems where the amplitude of a high-frequency carrier wave is varied in proportion to a lower-frequency message signal. In this task, you will be guided to leverage amplitude modulation to generate signals.
 
-Here we define the message signal as 
+Here we define the message signal as
 $$
 m(t) = \cos(2 \pi f_m t).
 $$
@@ -698,15 +697,15 @@ The message signal refers to the original signal that contains information, whic
 $$
 c(t) = \cos(2 \pi f_c t + \phi).
 $$
-There is no information content on the carrier signal. 
+There is no information content on the carrier signal.
 
 The key behind modulation is to superimpose the low-frequency message signal into a high-frequency carrier signal, which allows the message to be transmitted over long distances efficiently. Here we leverage Amplitude Modulation (AM).
 
-In AM, the amplitude of the carrier signal is varied in linear proportion of the instantaneous amplitude of the message signal. We model it as 
+In AM, the amplitude of the carrier signal is varied in linear proportion of the instantaneous amplitude of the message signal. We model it as
 $$
 s(t) = A_c(1+\mu \cdot m(t)) \cdot c(t)
 $$
-where 
+where
 
 - $A_c$ is the amplitude of the carrier wave
 - $\mu$ is the modulation index
@@ -715,9 +714,11 @@ where
 - $\phi$ is the initial phase of the carrier wave (in rad)
 
 In this task, you are asked to implement the function
+
 ```python
 def generate_am_signal(self, Ac: float, mu: float, fm: float, fc: float, phase: float):
 ```
+
 And you should return four numpy arrays:
 
 - `t`: Timestamp values in second
@@ -725,10 +726,11 @@ And you should return four numpy arrays:
 - `c_t`: Carrier signal values
 - `s_t`: Amplitude Modulated signal values
   
-In this task, we set the duration of the signal as $0 \le t < 2s$. The sampling rate is given by `self.fs`. 
-Please strictly follow the return format for facilitating the testing of your work. 
+In this task, we set the duration of the signal as $0 \le t < 2s$. The sampling rate is given by `self.fs`.
+Please strictly follow the return format for facilitating the testing of your work.
 
 After implementing the functions, you can run the following code to check the code:
+
 ```bash
 python check.py --task 3
 ```
@@ -736,13 +738,7 @@ python check.py --task 3
 The code will also automatically generate the figures for you to check the correctness of your implementation. You can find the figures in the `fig` folder.
 The message signal will be shown as the **envelope** of the AM signal.
 
-## How to submit
-
-**Please run** 
-```bash
-python check.py --uid <YOUR_UID>
-```
-**before submitting.** This script performs automated tests on the examples provided in the docstrings. Failing these tests indicates potential critical issues in your code. Strive to resolve these problems. After that, it will create a zip file named after your `uid`. Make sure you enter the right `uid`. 
+After implementing the tasks, **please run `python check.py --uid <YOUR_UID>` before submitting.** This script performs automated tests on the examples provided in the docstrings. Failing these tests indicates potential critical issues in your code. Strive to resolve these problems. After that, it will create a zip file named after your `uid`. Make sure you enter the right `uid`. 
 
 It's important to avoid changing the names of any files, including both the zip file and the program files contained within. Altering file names can lead to grading errors. Ensure that all file names remain as they are to facilitate accurate assessment of your work.
 

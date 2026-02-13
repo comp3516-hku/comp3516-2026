@@ -18,7 +18,6 @@ $$
 s(t) = \cos(2\pi \cdot f_0 \cdot t)
 $$
 
-
 ```python
 import numpy as np
 from scipy.signal import correlate
@@ -42,21 +41,15 @@ plt.xlabel("Lag")
 plt.ylabel("Correlation")
 ```
 
-
-
-
     Text(0, 0.5, 'Correlation')
 
 
 
 
     
-![png](lab_3_correlation_files/lab_3_correlation_4_1.png)
-    
-
+![png](../static_files/lab_3_correlation_files/lab_3_correlation_4_1.png)
 
 The graph of above correlation is symmetric, which means, again, only half of the information is useful. In common practice, we tend to normalize the highest peak to 1. So a complete version of calculating autocorrelation is as below:
-
 
 ```python
 corr = correlate(s_t, s_t, mode='full')
@@ -70,9 +63,6 @@ plt.xlabel("Lag")
 plt.ylabel("Correlation")
 ```
 
-
-
-
     Text(0, 0.5, 'Correlation')
 
 
@@ -80,17 +70,15 @@ plt.ylabel("Correlation")
 
     
 ![png](../static_files/lab_3_correlation_files/lab_3_correlation_6_1.png)
-    
-
 
 We can observe many peaks on the graph with various lags. Now we need to figure out two things:
+
 - What is the meaning of lag?
 - What is the meaning of these peaks?
 
 ## Example 2: An illustration of the ACF process
 
 Here we illustrate the process of computing ACF. The code below is not required for you. You can execute and watch the generated video.
-
 
 ```python
 import numpy as np
@@ -172,9 +160,6 @@ ani = FuncAnimation(fig, update, frames=range(max_lag), init_func=init, blit=Tru
 # # Display the animation
 HTML(ani.to_html5_video())
 ```
-
-
-
 
 <video width="1200" height="1000" controls autoplay>
   <source type="video/mp4" src="data:video/mp4;base64,AAAAIGZ0eXBNNFYgAAACAE00ViBpc29taXNvMmF2YzEAAAAIZnJlZQADhwxtZGF0AAACrgYF//+q
@@ -4269,20 +4254,13 @@ AAAAAExhdmY1OC43Ni4xMDA=
   Your browser does not support the video tag.
 </video>
 
-
-
-
-    
 ![png](../static_files/lab_3_correlation_files/lab_3_correlation_10_1.png)
-    
-
 
 As can be seen from the animation, lag means the step the signal moves. When the signal moves to the positive direction, 0 will be padding in the empty place. And multiplication will be exercised between the "delayed" signal and original signal. Therefore, ACF will observe the largest value at lag=0. At the same time, we will observe peaks at each period point. Intuitively, correlation is an approach for measuring the **similarity** of two signals. Auto-correlation can be viewed as the special case of correlation, i.e. comparing the shifted version with itself. When there is no shift (lag=0), similarity reaches the maximum value. When lag equals to the periodicity, at least one part of the signal is perfectly matched, thus reaching the peak.
 
 Different from FFT, ACF can only acquire one frequency, namely low frequency. Low frequency indicates the overall trend and periodicty of the signal. The algorithm is both computationally faster and significantly more accurate compared to the FFT, since the resolution is not limited by the number of samples used.
 
 ## Example 3: Extract the periodicity from ACF
-
 
 ```python
 import numpy as np
@@ -4313,9 +4291,6 @@ plt.ylabel("Correlation")
 x, t[x]
 ```
 
-
-
-
     (array([20, 40, 60, 79]), array([0.2 , 0.4 , 0.6 , 0.79]))
 
 
@@ -4323,15 +4298,12 @@ x, t[x]
 
     
 ![png](../static_files/lab_3_correlation_files/lab_3_correlation_13_1.png)
-    
-
 
 See, peaks will be observed when it reaches its periodicty. As usual, we can use the **first peak** as the result, which is 0.2s, corresponding to frequency of 5Hz.
 
 ## Example 4: Adding Windows
 
 ACF is a time-domain approach, which means it does not transform it to the frequency domain and acquire frequency directly from the time domain. If we want to get more information with the temporal change of frequency, we can use a **sliding window** along the temporal domain, especially when processing a long time series.
-
 
 ```python
 import pickle
@@ -4349,7 +4321,7 @@ plt.ylabel("Amplitude")
 ```
 
     Sampling frequency: 20 Hz
-
+    
 
 
 
@@ -4361,9 +4333,6 @@ plt.ylabel("Amplitude")
 
     
 ![png](../static_files/lab_3_correlation_files/lab_3_correlation_17_2.png)
-    
-
-
 
 ```python
 window_t = 10 # seconds
@@ -4395,9 +4364,6 @@ plt.ylabel("Breathing Rate [bpm]")
 
 ```
 
-
-
-
     Text(0, 0.5, 'Breathing Rate [bpm]')
 
 
@@ -4405,14 +4371,12 @@ plt.ylabel("Breathing Rate [bpm]")
 
     
 ![png](../static_files/lab_3_correlation_files/lab_3_correlation_18_1.png)
-    
-
 
 As shown above, we use a window of 10s and time step of 3s to calculate the breathing rate over time, namely $b(t)$. It will result in the time resolution of 3s in $b(t)$. The frequency resolution is determined by the window length, i.e. $1/T$, where $T$ is the window length.
 
 In a nutshell, we introduce ACF in this lab. You are required to know the physical meaning of ACF, get an intuitive understanding of the process of ACF and most importantly, be capable of calculating ACF and periodicity using code.
 
-# Programming Task
+## Programming Task
 
 ## Task 3-1: Apply ACF (20 points)
 
@@ -4420,7 +4384,7 @@ In a nutshell, we introduce ACF in this lab. You are required to know the physic
 
 Compute the frequency spectrum of the following signals. You are supposed to implement `apply_acf_pt()` and `apply_acf_pulse()` for the following two signals, respectively.
 
-The sampling rate `self.fs` is 500 Hz.  In this task, you are required to return the normalized ACF. 
+The sampling rate `self.fs` is 500 Hz.  In this task, you are required to return the normalized ACF.
 
 1. Pure Tone: The time range is $0 \le t < 10s$.
 
@@ -4428,22 +4392,18 @@ $$
 s(t) = 2.5 \cdot \cos(2 \pi \cdot 12.3 \cdot t + \pi/3)
 $$
 
-2. Pulse signal: The time range is $0 \le t < 2s$.
+1. Pulse signal: The time range is $0 \le t < 2s$.
 
 $$
-s(t)= 
+s(t)=
 \begin{cases}
-0 & \text { for } \: 0 \le t < 0.3 \\ 
-3 & \text { for } \: 0.3 \le t < 0.9 \\ 
-0 & \text { for } \: 0.9 \le t < 1.2 \\ 
-2 & \text { for } \: 1.2 \leq t < 1.8 \\ 
+0 & \text { for } \: 0 \le t < 0.3 \\
+3 & \text { for } \: 0.3 \le t < 0.9 \\
+0 & \text { for } \: 0.9 \le t < 1.2 \\
+2 & \text { for } \: 1.2 \leq t < 1.8 \\
 0 & \text { for } \: 1.8 \le t < 2
 \end{cases},
 $$
-
-
-
-
 
 ## Task 3-2: Extract Periodicity from ACF (40 points)
 
@@ -4458,8 +4418,8 @@ In this task, you are now given multiple files. These files contain signals that
    2) `get_br_2()`: Get the breathing rate over time $b(t)$. You should choose the window length as short as possible with time resolution of 1s. Your window length should be chosen from [1, 10]s and we assume the window length here is an integer.
   
 2. In the following problems, you should use `task_3_2_2.pickle`. It is a clip of ECG signal after filtering (You do not need to care about it yet.). Your task is to uncover the heart rate from ECG as a function of time. Heartbeat is a periodic event, and the heart rate is the frequency that the heart beats.  The heart rate of this participant is between 60 - 120 BPM (Beat Per Minute).
-   
-   1) `get_hr_1()`: You should use a 5-s sliding window with step of 2s. 
+
+   1) `get_hr_1()`: You should use a 5-s sliding window with step of 2s.
 
    2) `get_hr_2()`: You should adjust your window_length and window_step to make sure the frequency resolution is 0.5 Hz and time resolution is 0.1s.
   
@@ -4468,9 +4428,6 @@ In this task, you are now given multiple files. These files contain signals that
 - You should use ACF to acquire the results, rather than other approaches. Meanwhile, the accurate answer (Ground Truth, GT) is determined by ACF.
 - For task 3_2_1_1, 3_2_2_1 and 3_2_2_2, the answer is fixed. Your answer will be evaluated directly with GT.
 - For task 3_2_1_2, you should pick the minimum window length (int) required. You will be graded by the accuracy of your choice of window_length, window_step and your $b(t)$. So will task 3_2_2_1 and 3_2_2_2.
-
-
-
 
 ## Task 3-3: Data Similarity (40 points)
 
@@ -4494,7 +4451,7 @@ $$
 \rho = \frac{\sum_{i=0}^{N-1} (s_1[i] - \bar{s_1})\cdot(s_2[i] - \bar{s_2})}{\sqrt{\sum_{i=0}^{N-1} (s_1[i] - \bar{s_1})^2 \cdot \sum_{i=0}^{N-1} (s_2[i] - \bar{s_2})^2}},
 $$
 
-where $s_1$ and $s_2$ are two signals, and $\bar{s_1}$ and $\bar{s_2}$ are their means. You will find the formula is similar to the correlation formula you have seen above. When $\tau=0$, you will get 
+where $s_1$ and $s_2$ are two signals, and $\bar{s_1}$ and $\bar{s_2}$ are their means. You will find the formula is similar to the correlation formula you have seen above. When $\tau=0$, you will get
 
 $$
 \text{ACF}(0) = \sum_{i=0}^{N-1} s[i] \cdot s[i].
@@ -4506,7 +4463,7 @@ This can be seen in the PCC formula above. Specifically, for the numerator, afte
 
 You should use `correlate` to calculate the PCC. We will delete any `scipy.stats.pearsonr` or `np.corrcoef` in your code.
 
-The PCC is a very powerful indicator of similarity between two signals. It ranges from -1 to 1, where 1 means the signals are perfectly correlated, -1 means they are perfectly anti-correlated, and 0 means they are uncorrelated. 
+The PCC is a very powerful indicator of similarity between two signals. It ranges from -1 to 1, where 1 means the signals are perfectly correlated, -1 means they are perfectly anti-correlated, and 0 means they are uncorrelated.
 
 **You are required to use the PCC / Correlation to solve the following problems.**
 
@@ -4515,43 +4472,42 @@ The PCC is a very powerful indicator of similarity between two signals. It range
 You will first work on the motion sensor data. There are two sensors inside the apartment, one in the living room and one in the bedroom. Typically, the light will be turned on when the motion sensor detects movement. When someone is in the living room, we assume that the light in the living room is on. When someone is in the bedroom, we assume that the light in the bedroom is on. We assume that when the person is in the living room, only the motion sensor in the living room will be triggered. The same applies to the bedroom. In other words, the data from the two sensors should be negatively correlated.
 
 Below is an example of the motion sensor data. The sampling rate is 1 Hz.
-![Motion Sensor](image/motion_sensor.png)
+
+![Motion Sensor](../static_files/image/motion_sensor.png){ width=80% }
 
 > **Checkpoint 2 (5 points):** Implement `check_motion_sensors(m1, m2)` to calculate the PCC between the two motion sensor signals. You should return the PCC value and a Boolean value indicating whether the two sensors are working properly.
 
 You will then work on the temperature sensor data. There are two temperature sensors in the apartment, one in the living room and one in the bedroom. The temperature in the living room and the bedroom should be positively correlated.
 
 Below is an example of the temperature sensor data. The sampling rate is 1 Hz.
-![Temperature Sensor](image/temperature_sensor.png)
+
+![Temperature Sensor](../static_files/image/temperature_sensor.png){ width=80% }
 
 > **Checkpoint 3 (5 points):** Implement `check_temperature_sensors(t1, t2)` to calculate the PCC between the two temperature sensor signals. You should return the PCC value and a Boolean value indicating whether the two sensors are working properly.
 
-On Friday at 11:00 p.m., while he’s at a late study session, his smart home app pings him with an alert: two event sensors—one in the living room near his desk and one by the front door—picked up a sharp crack, like glass breaking. The living room sensor logs it at 11:00:10 p.m., but the door sensor records it at 11:00:10.2 p.m., a 0.2-second mismatch. Ethan’s security system, synced to these sensors, uses sound timing to trigger a break-in alarm and notify the police—but the 0.2-second drift, caused by a recent network lag, risks misclassifying it as two separate noises (e.g., a knock and a crack), delaying the alert. Ethan needs you to sync the signals to confirm it’s one event—a potential break-in—so he can override the system’s confusion, trigger the alarm, and check his door cam footage before someone gets away with his laptop. The threshold for synchronization is 0.1 seconds.
+On Friday at 11:00 p.m., while he’s at a late study session, his smart home app pings him with an alert: two event sensors—one in the living room near his desk and one by the front door—picked up a sharp crack, like glass breaking. The living room sensor logs it at 11:00:10 p.m., but the door sensor records it at 11:00:10.2 p.m., a 0.2-second mismatch. Ethan’s security system, synced to these sensors, uses sound timing to trigger a break-in alarm and notify the police—but the 0.2-second drift, caused by a recent network lag, risks misclassifying it as two separate noises (e.g., a knock and a crack), delaying the alert. Ethan needs you to sync the signals to confirm it’s one event—a potential break-in—so he can override the system’s confusion, trigger the alarm, and check his door cam footage before someone gets away with his laptop. The threshold for synchronization is 0.1 seconds (inclusive).
 
 To this end, you will check the two event sensors in the apartment and examine the synchronization between them.
 
-Below is an example of the event sensor data. The sampling rate is 0.1 Hz.
-![Event Sensor](image/event_sensor.png)
+Below is an example of the event sensor data. The sampling rate is 10 Hz.
+
+![Event Sensor](../static_files/image/event_sensor.png){ width=80% }
 
 > **Checkpoint 4 (10 points):** Implement `sync_event_signals(s1, s2)` to synchronize the two sound sensor signals. You should return the delay in seconds and whether it can normally trigger the alarm.
 
-
-Finally, Ethan’s been puzzled by flickering lights even when he’s away. He suspects a neighbor’s loud music might be triggering the sound-activated lighting system falsely. On Saturday morning, the living room sound sensor records ambient noise, and Ethan provides a known pattern of his neighbor’s bass-heavy music (pattern, 100 samples). You are required to detect the pattern in the sound sensor signal.
+Finally, Ethan’s been puzzled by flickering lights even when he’s away. He suspects a neighbor’s loud music might be triggering the sound-activated lighting system falsely. On Saturday morning, the living room sound sensor records ambient noise, and Ethan provides a known pattern of his neighbor’s bass-heavy music (pattern, 3200 samples). You are required to detect the pattern in the sound sensor signal.
 
 Below is an example of the sound sensor data. The sampling rate is 16 kHz.
-![Sound Sensor](image/sound_sensor.png)
 
-> **Checkpoint 5 (10 points):** Implement `detect_music_pattern(s, p)` to detect the neighbor’s music pattern in the sound signal. Use PCC to find where the pattern best matches. Return the starting index (integer) of the strongest match.
+![Sound Sensor](../static_files/image/sound_sensor.png){ width=80% }
+
+> **Checkpoint 5 (10 points):** Implement `detect_music_patterns(s, p)` to detect the neighbor’s music pattern in the sound signal. Use PCC to find where the pattern best matches. Return the starting index (integer) of the strongest match.
 
 You will then report your results to the company's internal system -- Moodle, where your boss and Ethan will see them. Thanks for your efforts!
 
 
-## How to submit
-
-**Please run `python check.py --uid <YOUR_UID>` before submitting.** This script performs automated tests on the examples provided in the docstrings. Failing these tests indicates potential critical issues in your code. Strive to resolve these problems. After that, it will create a zip file named after your `uid`. Make sure you enter the right `uid`. 
+After implementing the tasks, **please run `python check.py --uid <YOUR_UID>` before submitting.** This script performs automated tests on the examples provided in the docstrings. Failing these tests indicates potential critical issues in your code. Strive to resolve these problems. After that, it will create a zip file named after your `uid`. Make sure you enter the right `uid`.
 
 It's important to avoid changing the names of any files, including both the zip file and the program files contained within. Altering file names can lead to grading errors. Ensure that all file names remain as they are to facilitate accurate assessment of your work.
 
-Your submission to **Moodle** should consist solely of the **generated `*.zip` file**. It is your responsibility to double check whether your submitted zip file includes your latest work. 
-
-
+Your submission to **Moodle** should consist solely of the **generated `*.zip` file**. It is your responsibility to double check whether your submitted zip file includes your latest work.
