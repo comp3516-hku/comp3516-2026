@@ -11,10 +11,6 @@ items:
 #   name: Lectures
 #   icon_class: fas fa-book-reader
 
-- url: /tutorials/
-  name: Tutorials
-  icon_class: fas fa-book-reader
-
 - url: /labs/
   name: Labs
   icon_class: fab fa-github
