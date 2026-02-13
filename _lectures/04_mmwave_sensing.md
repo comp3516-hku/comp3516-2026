@@ -1,7 +1,7 @@
 ---
 type: lecture
-date: 2025-02-14
-title: mmWave Sensing I
+date: 2026-02-03
+title: mmWave Sensing
 # tldr: ""
 # thumbnail: /static_files/presentations/lec.jpg
 links: 

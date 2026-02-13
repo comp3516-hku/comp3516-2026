@@ -1,7 +1,7 @@
 ---
 type: lecture
-date: 2025-03-04
-title: Tutorial-2
+date: 2026-02-24
+title: Lab 3&4 Tutorials
 # tldr: ""
 # thumbnail: /static_files/presentations/lec.jpg
 links: 
@@ -9,7 +9,7 @@ links:
     #   name: notes
     # - url: /static_files/presentations/code.zip
     #   name: codes
-    # - url: /static_files/slides/lec01-introduction.pdf
-    #   name: slides
+    - url: /static_files/Tutorial_2_release.zip
+      name: Materials
 ---
 

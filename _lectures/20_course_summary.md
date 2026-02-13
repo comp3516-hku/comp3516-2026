@@ -1,6 +1,6 @@
 ---
 type: lecture
-date: 2025-04-29
+date: 2026-04-28
 title: Course Summary
 # tldr: ""
 # thumbnail: /static_files/presentations/lec.jpg

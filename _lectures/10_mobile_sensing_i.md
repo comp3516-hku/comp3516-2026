@@ -1,6 +1,6 @@
 ---
 type: lecture
-date: 2025-03-18
+date: 2026-03-03
 title: Mobile Sensing I
 # tldr: ""
 # thumbnail: /static_files/presentations/lec.jpg

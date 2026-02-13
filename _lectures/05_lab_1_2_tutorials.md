@@ -1,7 +1,7 @@
 ---
 type: lecture
-date: 2025-02-18
-title: Tutorial-1
+date: 2026-02-10
+title: Lab 1&2 Tutorials
 # tldr: ""
 # thumbnail: /static_files/presentations/lec.jpg
 links: 

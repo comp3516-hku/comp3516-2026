@@ -1,15 +1,11 @@
 ---
 layout: lab
 type: lab
-date: 2025-03-20
+date: 2026-02-24
 title: 'Lab #3 Correlation'
 # pdf: /static_files/assignments/asg.pdf
 attachment: /static_files/lab_3_release.zip
 # solutions: /static_files/assignments/asg_solutions.pdf
-due_event: 
-    type: due
-    date: 2024-03-20T23:59:59
-    description: 'Lab #3 due'
 mathjax: true
 ---
 

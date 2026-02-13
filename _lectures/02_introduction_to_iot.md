@@ -1,7 +1,7 @@
 ---
 type: lecture
-date: 2025-01-24
-title: Introuction to IoT
+date: 2026-01-22
+title: Introduction to IoT
 # tldr: ""
 # thumbnail: /static_files/presentations/lec.jpg
 links: 

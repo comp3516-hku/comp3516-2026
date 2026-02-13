@@ -1,7 +1,7 @@
 ---
 type: lecture
-date: 2025-02-07
-title: Wireless for IoT
+date: 2026-01-27
+title: Wireless IoT
 # tldr: ""
 # thumbnail: /static_files/presentations/lec.jpg
 links: 

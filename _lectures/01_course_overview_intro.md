@@ -1,7 +1,7 @@
 ---
 type: lecture
-date: 2025-01-21
-title: Course Overview
+date: 2026-01-20
+title: Course Overview, Intro
 # tldr: ""
 # thumbnail: /static_files/presentations/lec.jpg
 links: 

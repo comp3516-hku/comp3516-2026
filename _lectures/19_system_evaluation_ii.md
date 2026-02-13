@@ -1,7 +1,7 @@
 ---
 type: lecture
-date: 2025-04-25
-title: Advanced Topics
+date: 2026-04-15
+title: System Evaluation II
 # tldr: ""
 # thumbnail: /static_files/presentations/lec.jpg
 links: 
@@ -9,7 +9,7 @@ links:
     #   name: notes
     # - url: /static_files/presentations/code.zip
     #   name: codes
-    # - url: /static_files/slides/lec01-introduction.pdf
-    #   name: slides
+    - url: /static_files/slides/lec10-evaluation.pdf
+      name: slides
 ---
 

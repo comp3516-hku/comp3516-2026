@@ -1,7 +1,7 @@
 ---
 type: lecture
-date: 2025-02-28
-title: Wi-Fi Sensing I
+date: 2026-02-11
+title: WiFi Sensing I
 # tldr: ""
 # thumbnail: /static_files/presentations/lec.jpg
 links: 

@@ -4,7 +4,7 @@ layout: home
 
 Welcome to COMP3516@HKU, AY2025-26!
 
-**This is the non-official site of HKU COMP3516 2025 Spring. This website is maintained *at best effort*. Enrolled HKU students should join [Moodle page](https://moodle.hku.hk/course/view.php?id=116889). In the event of any discrepancies between this page and Moodle, the Moodle page shall prevail.**
+**This is the non-official site of HKU COMP3516 2026 Spring. This website is maintained *at best effort*. Enrolled HKU students should join [Moodle page](https://moodle.hku.hk/course/view.php?id=116889). In the event of any discrepancies between this page and Moodle, the Moodle page shall prevail.**
 
 
 This course introduces basic concepts, technologies, and applications of the Internet of Things (IoT), with a focus on data analytics. The course covers a range of enabling techniques in sensing, computing, analytics, learning for IoT and connects them to exciting applications in smart homes, healthcare, security, etc. The lectures cover the pipeline of data generation, data acquisition, data transportation, data analysis and learning, and data applications, with various topics from the fundamentals (e.g., signal processing, statistical analysis, machine learning) to real-world systems. Billions of things are connected today, and this course helps students to understand how IoT will evolve into AIoT (Artificial Intelligence of Things).
@@ -19,13 +19,13 @@ This course introduces basic concepts, technologies, and applications of the Int
     </tr>
     <tr>
         <th>Lecture-01</th>
-        <td>12:30 PM - 13:20 PM, Tue	</td>
-        <td>CBA</td>
+        <td>15:00 PM - 15:50 PM, Tue</td>
+        <td>MB167</td>
     </tr>
     <tr>
         <th>Lecture-02</th>
-        <td>12:30 PM - 14:20 PM, Fri </td>
-        <td>CBA</td>
+        <td>09:00 AM - 10:50 AM, Wed </td>
+        <td>LE1</td>
     </tr>
 </table>
 
@@ -54,12 +54,7 @@ This course introduces basic concepts, technologies, and applications of the Int
     <tr>
         <th>Project</th>
         <td> 30</td>
-        <td> Group project</td>
-    </tr>
-    <tr>
-        <th>Bonus</th>
-        <td>  1</td>
-        <td> The Takeaway Talk (TTT)*</td>
+        <td> Group project + individual project</td>
     </tr>
     <tr>
         <th>Final Exam</th>
@@ -68,11 +63,6 @@ This course introduces basic concepts, technologies, and applications of the Int
     </tr>
 </table>
 
-*TTT: We intend to design and develop this course as a communication-intensive course. As part of it, we have designed a special component named "3-Minutes Takeaway Talk". By the end of each lecture, I will reserve three minutes and invite one student to give a summary of the takeaway messages for the lecture, in the format of a Chalk Talk in front of the class. Every participant will be awarded a 1-point bonus. 
-The participants will be selected (randomly, or at least as randomly as possible) by me at the end of the lecture. If you would like to participate, please sign up with your name first. 
-
-Besides TTT, as you can tell, the course also features intensive written communications (technical report, peer review, etc) and oral communications (presentation), plus wireless communications certainly:-P
-
 ## **Office Hour**
 
 |             	|                                                         Instructor                                                         	|                                          Tutor                                         	|
@@ -80,8 +70,8 @@ Besides TTT, as you can tell, the course also features intensive written communi
 | Name        	| Dr. Chenshu WU                                                                                                             	| Mr. Yuemin  YU                                                                          	|
 | Office      	| Office: CB315B                                                                                                             	| HW101M                                                                                 	|
 | Email       	| chenshu@cs.hku.hk                                                                                                          	| yuyuemin@connect.hku.hk                                                                	|
-| Office Hour 	| <br> Tue 9:00 am-10:30 am<br> Fri 9:00 am to 10:30 am<br>By appointment: [Appointment](https://calendly.com/cswu-1/comp3516-office-hours) 	| <br>Thur 12:30 PM - 13:30 PM (f2f)<br>Mon 9:30 AM - 10:30 AM (Online)<br>By appointment: [Appointment](https://hku.au1.qualtrics.com/jfe/form/SV_bmudu4j6QIUTWOG) 	|
-| Tel         	| 2241 5726                                                                                                                  	| 9476 5141 (Not preferred)                                                              	|
+| Office Hour 	| <br> Tue 9:00 am-10:30 am<br> Fri 9:00 am to 10:30 am<br>By appointment: [Appointment](https://calendly.com/cswu-1/comp3516-office-hours) 	| <br>Fri 14:00 PM - 16:00 PM (f2f) <br>By appointment: [Appointment](https://calendly.com/yuyuemin2003/3516-ta-oh) 	|
+| Tel         	| 2241 5726                                                                                                                  	| N/A)                                                              	|
 
 
 

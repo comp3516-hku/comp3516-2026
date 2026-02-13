@@ -1,15 +1,11 @@
 ---
 layout: lab
 type: lab
-date: 2025-02-09
+date: 2026-02-10
 title: 'Lab #2 Frequency'
 # pdf: /static_files/assignments/asg.pdf
 attachment: /static_files/lab_2_release.zip
 # solutions: /static_files/assignments/asg_solutions.pdf
-due_event: 
-    type: due
-    date: 2025-02-27T19:59:59
-    description: 'Lab #2 due'
 mathjax: true
 ---
 # Lab 2 -- Frequency

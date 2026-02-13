@@ -1,7 +1,7 @@
 ---
 type: lecture
-date: 2025-02-21
-title: Wireless Channel
+date: 2026-02-04
+title: Wireless Channel and CSI
 # tldr: ""
 # thumbnail: /static_files/presentations/lec.jpg
 links: 

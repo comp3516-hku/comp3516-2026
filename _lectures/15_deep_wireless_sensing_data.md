@@ -1,7 +1,7 @@
 ---
 type: lecture
-date: 2025-04-01
-title: Deep Wireless Sensing I
+date: 2026-03-31
+title: Deep Wireless Sensing (Data)
 # tldr: ""
 # thumbnail: /static_files/presentations/lec.jpg
 links: 

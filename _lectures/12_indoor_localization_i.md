@@ -1,6 +1,6 @@
 ---
 type: lecture
-date: 2025-03-25
+date: 2026-03-24
 title: Indoor Localization I
 # tldr: ""
 # thumbnail: /static_files/presentations/lec.jpg

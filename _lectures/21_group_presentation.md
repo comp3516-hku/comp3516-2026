@@ -1,7 +1,7 @@
 ---
 type: lecture
-date: 2025-05-02
-title: Project Presentation
+date: 2026-04-29
+title: Group Presentation
 # tldr: ""
 # thumbnail: /static_files/presentations/lec.jpg
 links: 

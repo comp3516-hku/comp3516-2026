@@ -1,6 +1,6 @@
 ---
 type: lecture
-date: 2025-02-11
+date: 2026-01-28
 title: Basics of Signals
 # tldr: ""
 # thumbnail: /static_files/presentations/lec.jpg
