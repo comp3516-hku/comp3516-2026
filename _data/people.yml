@@ -1,0 +1,18 @@
+instructors:
+  - name: Chenshu Wu
+    profile_pic: /_images/cs_2024-Chenshu_Wu-01.jpg
+    webpage: https://cswu.me
+
+
+teaching_assistants:
+  - name: Yuemin Yu
+    profile_pic: /_images/Yuemin.jpg
+    webpage: https://yuyueminaustin.github.io
+
+  # - name: Hermione Granger
+  #   profile_pic: /_images/pp/granger.jpg
+  #   webpage: https://en.wikipedia.org/wiki/Hermione_Granger
+
+  # - name: Ron Weasley
+  #   profile_pic: /_images/pp/weasley.jpg
+  #   webpage: https://en.wikipedia.org/wiki/Ron_Weasley

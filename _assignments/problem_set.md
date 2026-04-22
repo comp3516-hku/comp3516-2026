@@ -1,0 +1,17 @@
+---
+type: assignment
+date: 2026-02-17
+title: 'Problem Set #1'
+pdf: /static_files/2026-Problem_Set.pdf
+# attachment: /static_files/assignments/asg.zip
+# solutions: /static_files/assignments/asg_solutions.pdf
+due_event:
+    type: due
+    date: 2026-04-30T23:59:59
+    description: 'Problem Set #1 due'
+mathjax: true
+---
+
+
+
+
