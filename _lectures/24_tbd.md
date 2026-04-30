@@ -1,7 +1,7 @@
 ---
 type: lecture
 date: 2026-04-22
-title: TBD
+title: No Class
 # tldr: ""
 # thumbnail: /static_files/presentations/lec.jpg
 # links:
