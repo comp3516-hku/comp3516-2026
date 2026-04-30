@@ -4,7 +4,9 @@ date: 2026-04-28
 title: Course Summary
 # tldr: ""
 # thumbnail: /static_files/presentations/lec.jpg
-links: 
+links:
+    - url: /static_files/slides/lec11-Summary.pdf
+      name: slides
     # - url: /static_files/presentations/lec.zip
     #   name: notes
     # - url: /static_files/presentations/code.zip
